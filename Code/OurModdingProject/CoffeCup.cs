@@ -32,7 +32,7 @@ namespace Eco.Cafe
     {
         public override LocString DisplayDescription => Localizer.DoStr("A Coffee Cup for Storing Your Delicious Coffee!");
     }
-
+    
     [RequiresSkill(typeof(PaperMillingSkill), 1)]
     public partial class CoffeeCupRecipe : RecipeFamily
     {
