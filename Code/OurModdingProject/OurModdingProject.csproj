@@ -5,6 +5,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove=".gitignore" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Reference Include="Eco.Core">
       <HintPath>..\..\Dependencies\Eco.Core.dll</HintPath>
     </Reference>
