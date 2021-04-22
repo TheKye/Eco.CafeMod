@@ -1,0 +1,7 @@
+ManifestFileVersion: 0
+CRC: 194215671
+AssetBundleManifest:
+  AssetBundleInfos:
+    Info_0:
+      Name: cafemod
+      Dependencies: {}

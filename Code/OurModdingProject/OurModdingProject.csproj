@@ -1,0 +1,49 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="Eco.Core">
+      <HintPath>..\..\..\..\..\Modkit\ReferenceAssemblies\Eco.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Eco.Gameplay">
+      <HintPath>..\..\..\..\..\Modkit\ReferenceAssemblies\Eco.Gameplay.dll</HintPath>
+    </Reference>
+    <Reference Include="Eco.ModKit">
+      <HintPath>..\..\..\..\..\Modkit\ReferenceAssemblies\Eco.ModKit.dll</HintPath>
+    </Reference>
+    <Reference Include="Eco.Mods">
+      <HintPath>..\..\..\..\..\Modkit\ReferenceAssemblies\Eco.Mods.dll</HintPath>
+    </Reference>
+    <Reference Include="Eco.Networking.ENet">
+      <HintPath>..\..\..\..\..\Modkit\ReferenceAssemblies\Eco.Networking.ENet.dll</HintPath>
+    </Reference>
+    <Reference Include="Eco.Plugins">
+      <HintPath>..\..\..\..\..\Modkit\ReferenceAssemblies\Eco.Plugins.dll</HintPath>
+    </Reference>
+    <Reference Include="Eco.Shared">
+      <HintPath>..\..\..\..\..\Modkit\ReferenceAssemblies\Eco.Shared.dll</HintPath>
+    </Reference>
+    <Reference Include="Eco.Simulation">
+      <HintPath>..\..\..\..\..\Modkit\ReferenceAssemblies\Eco.Simulation.dll</HintPath>
+    </Reference>
+    <Reference Include="Eco.Stats">
+      <HintPath>..\..\..\..\..\Modkit\ReferenceAssemblies\Eco.Stats.dll</HintPath>
+    </Reference>
+    <Reference Include="Eco.WebServer">
+      <HintPath>..\..\..\..\..\Modkit\ReferenceAssemblies\Eco.WebServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Eco.World">
+      <HintPath>..\..\..\..\..\Modkit\ReferenceAssemblies\Eco.World.dll</HintPath>
+    </Reference>
+    <Reference Include="Eco.WorldGenerator">
+      <HintPath>..\..\..\..\..\Modkit\ReferenceAssemblies\Eco.WorldGenerator.dll</HintPath>
+    </Reference>
+    <Reference Include="EcoServer">
+      <HintPath>..\..\..\..\..\Modkit\ReferenceAssemblies\EcoServer.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>
