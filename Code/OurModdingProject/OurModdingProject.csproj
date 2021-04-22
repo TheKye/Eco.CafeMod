@@ -6,43 +6,43 @@
 
   <ItemGroup>
     <Reference Include="Eco.Core">
-      <HintPath>..\..\..\..\..\Modkit\ReferenceAssemblies\Eco.Core.dll</HintPath>
+      <HintPath>..\..\Dependencies\Eco.Core.dll</HintPath>
     </Reference>
     <Reference Include="Eco.Gameplay">
-      <HintPath>..\..\..\..\..\Modkit\ReferenceAssemblies\Eco.Gameplay.dll</HintPath>
+      <HintPath>..\..\Dependencies\Eco.Gameplay.dll</HintPath>
     </Reference>
     <Reference Include="Eco.ModKit">
-      <HintPath>..\..\..\..\..\Modkit\ReferenceAssemblies\Eco.ModKit.dll</HintPath>
+      <HintPath>..\..\Dependencies\Eco.ModKit.dll</HintPath>
     </Reference>
     <Reference Include="Eco.Mods">
-      <HintPath>..\..\..\..\..\Modkit\ReferenceAssemblies\Eco.Mods.dll</HintPath>
+      <HintPath>..\..\Dependencies\Eco.Mods.dll</HintPath>
     </Reference>
     <Reference Include="Eco.Networking.ENet">
-      <HintPath>..\..\..\..\..\Modkit\ReferenceAssemblies\Eco.Networking.ENet.dll</HintPath>
+      <HintPath>..\..\Dependencies\Eco.Networking.ENet.dll</HintPath>
     </Reference>
     <Reference Include="Eco.Plugins">
-      <HintPath>..\..\..\..\..\Modkit\ReferenceAssemblies\Eco.Plugins.dll</HintPath>
+      <HintPath>..\..\Dependencies\Eco.Plugins.dll</HintPath>
     </Reference>
     <Reference Include="Eco.Shared">
-      <HintPath>..\..\..\..\..\Modkit\ReferenceAssemblies\Eco.Shared.dll</HintPath>
+      <HintPath>..\..\Dependencies\Eco.Shared.dll</HintPath>
     </Reference>
     <Reference Include="Eco.Simulation">
-      <HintPath>..\..\..\..\..\Modkit\ReferenceAssemblies\Eco.Simulation.dll</HintPath>
+      <HintPath>..\..\Dependencies\Eco.Simulation.dll</HintPath>
     </Reference>
     <Reference Include="Eco.Stats">
-      <HintPath>..\..\..\..\..\Modkit\ReferenceAssemblies\Eco.Stats.dll</HintPath>
+      <HintPath>..\..\Dependencies\Eco.Stats.dll</HintPath>
     </Reference>
     <Reference Include="Eco.WebServer">
-      <HintPath>..\..\..\..\..\Modkit\ReferenceAssemblies\Eco.WebServer.dll</HintPath>
+      <HintPath>..\..\Dependencies\Eco.WebServer.dll</HintPath>
     </Reference>
     <Reference Include="Eco.World">
-      <HintPath>..\..\..\..\..\Modkit\ReferenceAssemblies\Eco.World.dll</HintPath>
+      <HintPath>..\..\Dependencies\Eco.World.dll</HintPath>
     </Reference>
     <Reference Include="Eco.WorldGenerator">
-      <HintPath>..\..\..\..\..\Modkit\ReferenceAssemblies\Eco.WorldGenerator.dll</HintPath>
+      <HintPath>..\..\Dependencies\Eco.WorldGenerator.dll</HintPath>
     </Reference>
     <Reference Include="EcoServer">
-      <HintPath>..\..\..\..\..\Modkit\ReferenceAssemblies\EcoServer.dll</HintPath>
+      <HintPath>..\..\Dependencies\EcoServer.dll</HintPath>
     </Reference>
   </ItemGroup>
 

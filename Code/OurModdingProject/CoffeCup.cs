@@ -46,10 +46,15 @@ namespace Eco.Cafe
                     new IngredientElement[]
                     {
                         new IngredientElement(typeof(PaperItem), 5, typeof(PaperMillingSkill))
-                    }
+                    },
+                    new CraftingElement<CoffeeCupItem>()
                     )
             };
+            this.ExperienceOnCraft = 1;
+            this.LaborInCalories = CreateLaborInCaloriesValue(250, typeof(PaperMillingSkill));
+            this.CraftMinutes = CreateCraftTimeValue(typeof(CoffeeCupRecipe), 1, typeof(PaperMillingSkill), typeof(PaperMillingParallelSpeedTalent), typeof(PaperMillingFocusedSpeedTalent));
+            this.Initialize(Localizer.DoStr("Coffee Cup"), typeof(CoffeeCupRecipe));
+            CraftingComponent.AddRecipe(typeof(TailoringTableObject), this);
         }
     }
-    
 }
