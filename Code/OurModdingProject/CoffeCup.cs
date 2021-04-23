@@ -47,7 +47,7 @@ namespace Eco.Cafe
                     {
                         new IngredientElement(typeof(PaperItem), 5, typeof(PaperMillingSkill))
                     },
-                    new CraftingElement<CoffeeCupItem>()
+                    new CraftingElement<CoffeeCupItem>(5)
                     )
             };
             this.ExperienceOnCraft = 1;
