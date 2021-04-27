@@ -36,13 +36,13 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 12018}
+      Script: {instanceID: 11854}
     - Class: 114
-      Script: {instanceID: 12156}
+      Script: {instanceID: 12110}
     - Class: 114
-      Script: {instanceID: 13162}
+      Script: {instanceID: 13336}
     - Class: 114
-      Script: {instanceID: 13384}
+      Script: {instanceID: 13576}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -62,16 +62,16 @@ ScriptsOnlyBuild:
   scriptHashData:
   - hash:
       serializedVersion: 2
-      Hash: a6e561615949734e9f12f9b61661f43e
-    assemblyName: UnityEngine.UI.dll
-    namespaceName: UnityEngine.UI
-    className: Image
-  - hash:
-      serializedVersion: 2
       Hash: 0dbc3be398b4869a5c8d0d8481ee402c
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: LayoutElement
+  - hash:
+      serializedVersion: 2
+      Hash: a6e561615949734e9f12f9b61661f43e
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: Image
   - hash:
       serializedVersion: 2
       Hash: 344a8c2e106a0a4e098e91a52e0af063
@@ -87,4 +87,4 @@ ScriptsOnlyBuild:
   platform: 5
   scenePathNames:
   - Assets/Scenes/Main.unity
-  playerPath: C:/Users/kye-a/Desktop/Tutorial/ModdingIn/Item/Unity/OurModdingProject/AssetBundles/cafemod
+  playerPath: D:/Github/Eco.CafeMod/Unity/OurModdingProject/AssetBundles/cafemod

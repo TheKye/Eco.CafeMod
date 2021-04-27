@@ -2,6 +2,8 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
+    <RootNamespace>Eco.Cafe</RootNamespace>
+    <AssemblyName>TheCafeMod</AssemblyName>
   </PropertyGroup>
 
   <ItemGroup>
