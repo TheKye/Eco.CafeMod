@@ -1,6 +1,6 @@
 m_ProjectFiles:
   m_ManifestFileStatus:
-    m_FilePath: C:/Users/kye-a/Desktop/Tutorial/ModdingIn/Item/Unity/OurModdingProject/Packages/manifest.json
+    m_FilePath: D:/Github/Eco.CafeMod/Unity/OurModdingProject/Packages/manifest.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
@@ -8,17 +8,17 @@ m_ProjectFiles:
       ticks: 637542063565276172
     m_Hash: 2380648995
   m_LockFileStatus:
-    m_FilePath: C:/Users/kye-a/Desktop/Tutorial/ModdingIn/Item/Unity/OurModdingProject/Packages/packages-lock.json
+    m_FilePath: D:/Github/Eco.CafeMod/Unity/OurModdingProject/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637542064236200889
+      ticks: 637550861977298676
     m_Hash: 669433589
 m_EmbeddedPackageManifests:
   m_ManifestsStatus:
-    C:/Users/kye-a/Desktop/Tutorial/ModdingIn/Item/Unity/OurModdingProject/Packages/com.strangeloopgames.eco-shared/package.json:
-      m_FilePath: C:/Users/kye-a/Desktop/Tutorial/ModdingIn/Item/Unity/OurModdingProject/Packages/com.strangeloopgames.eco-shared/package.json
+    D:/Github/Eco.CafeMod/Unity/OurModdingProject/Packages/com.strangeloopgames.eco-shared/package.json:
+      m_FilePath: D:/Github/Eco.CafeMod/Unity/OurModdingProject/Packages/com.strangeloopgames.eco-shared/package.json
       m_PathExists: 1
       m_ContentTrackingEnabled: 1
       m_ModificationDate:
@@ -33,7 +33,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.3.9
       source: 1
-      resolvedPath: C:\Users\kye-a\Desktop\Tutorial\ModdingIn\Item\Unity\OurModdingProject\Library\PackageCache\com.unity.collab-proxy@1.3.9
+      resolvedPath: D:\Github\Eco.CafeMod\Unity\OurModdingProject\Library\PackageCache\com.unity.collab-proxy@1.3.9
       assetPath: Packages/com.unity.collab-proxy
       name: com.unity.collab-proxy
       displayName: Unity Collaborate
@@ -128,7 +128,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.2.1
       source: 1
-      resolvedPath: C:\Users\kye-a\Desktop\Tutorial\ModdingIn\Item\Unity\OurModdingProject\Library\PackageCache\com.unity.ide.rider@1.2.1
+      resolvedPath: D:\Github\Eco.CafeMod\Unity\OurModdingProject\Library\PackageCache\com.unity.ide.rider@1.2.1
       assetPath: Packages/com.unity.ide.rider
       name: com.unity.ide.rider
       displayName: JetBrains Rider Editor
@@ -231,7 +231,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 2.0.5
       source: 1
-      resolvedPath: C:\Users\kye-a\Desktop\Tutorial\ModdingIn\Item\Unity\OurModdingProject\Library\PackageCache\com.unity.ide.visualstudio@2.0.5
+      resolvedPath: D:\Github\Eco.CafeMod\Unity\OurModdingProject\Library\PackageCache\com.unity.ide.visualstudio@2.0.5
       assetPath: Packages/com.unity.ide.visualstudio
       name: com.unity.ide.visualstudio
       displayName: Visual Studio Editor
@@ -302,7 +302,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.2.3
       source: 1
-      resolvedPath: C:\Users\kye-a\Desktop\Tutorial\ModdingIn\Item\Unity\OurModdingProject\Library\PackageCache\com.unity.ide.vscode@1.2.3
+      resolvedPath: D:\Github\Eco.CafeMod\Unity\OurModdingProject\Library\PackageCache\com.unity.ide.vscode@1.2.3
       assetPath: Packages/com.unity.ide.vscode
       name: com.unity.ide.vscode
       displayName: Visual Studio Code Editor
@@ -371,7 +371,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.1.19
       source: 1
-      resolvedPath: C:\Users\kye-a\Desktop\Tutorial\ModdingIn\Item\Unity\OurModdingProject\Library\PackageCache\com.unity.test-framework@1.1.19
+      resolvedPath: D:\Github\Eco.CafeMod\Unity\OurModdingProject\Library\PackageCache\com.unity.test-framework@1.1.19
       assetPath: Packages/com.unity.test-framework
       name: com.unity.test-framework
       displayName: Test Framework
@@ -462,7 +462,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 3.0.1
       source: 1
-      resolvedPath: C:\Users\kye-a\Desktop\Tutorial\ModdingIn\Item\Unity\OurModdingProject\Library\PackageCache\com.unity.textmeshpro@3.0.1
+      resolvedPath: D:\Github\Eco.CafeMod\Unity\OurModdingProject\Library\PackageCache\com.unity.textmeshpro@3.0.1
       assetPath: Packages/com.unity.textmeshpro
       name: com.unity.textmeshpro
       displayName: TextMeshPro
@@ -617,7 +617,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.3.6
       source: 1
-      resolvedPath: C:\Users\kye-a\Desktop\Tutorial\ModdingIn\Item\Unity\OurModdingProject\Library\PackageCache\com.unity.timeline@1.3.6
+      resolvedPath: D:\Github\Eco.CafeMod\Unity\OurModdingProject\Library\PackageCache\com.unity.timeline@1.3.6
       assetPath: Packages/com.unity.timeline
       name: com.unity.timeline
       displayName: Timeline
@@ -2467,12 +2467,12 @@ m_PackageAssets:
         url: 
         revision: 
         path: 
-    - packageId: com.strangeloopgames.eco-shared@file:C:\Users\kye-a\Desktop\Tutorial\ModdingIn\Item\Unity\OurModdingProject\Packages\com.strangeloopgames.eco-shared
+    - packageId: com.strangeloopgames.eco-shared@file:D:\Github\Eco.CafeMod\Unity\OurModdingProject\Packages\com.strangeloopgames.eco-shared
       testable: 1
       isDirectDependency: 1
       version: 0.0.0
       source: 3
-      resolvedPath: C:\Users\kye-a\Desktop\Tutorial\ModdingIn\Item\Unity\OurModdingProject\Packages\com.strangeloopgames.eco-shared
+      resolvedPath: D:\Github\Eco.CafeMod\Unity\OurModdingProject\Packages\com.strangeloopgames.eco-shared
       assetPath: Packages/com.strangeloopgames.eco-shared
       name: com.strangeloopgames.eco-shared
       displayName: Eco.Shared
@@ -2631,7 +2631,7 @@ m_PackageAssets:
       isDirectDependency: 0
       version: 1.0.5
       source: 1
-      resolvedPath: C:\Users\kye-a\Desktop\Tutorial\ModdingIn\Item\Unity\OurModdingProject\Library\PackageCache\com.unity.ext.nunit@1.0.5
+      resolvedPath: D:\Github\Eco.CafeMod\Unity\OurModdingProject\Library\PackageCache\com.unity.ext.nunit@1.0.5
       assetPath: Packages/com.unity.ext.nunit
       name: com.unity.ext.nunit
       displayName: Custom NUnit
@@ -2689,5 +2689,5 @@ m_PackageAssets:
         path: 
   m_LocalPackages:
     m_LocalFileStatus: []
-m_ProjectPath: C:/Users/kye-a/Desktop/Tutorial/ModdingIn/Item/Unity/OurModdingProject/Packages
+m_ProjectPath: D:/Github/Eco.CafeMod/Unity/OurModdingProject/Packages
 m_EditorVersion: 2020.1.17f1 (9957aee8edc2)
