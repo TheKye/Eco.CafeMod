@@ -3,8 +3,18 @@
 
 using UnityEngine;
 using System;
+using System.Collections.Generic;
+using Eco.Shared.Items;
 using Eco.Shared.Localization;
 using VoxelEngine.Materials;
+
+/// <summary>Force set a material to be transparent or opaque.</summary>
+public enum OverrideMaterialTransparency : byte
+{
+    NotOverride,
+    ForceTransparent,
+    ForceOpaque
+}
 
 [Serializable]
 public partial class Block 
@@ -14,12 +24,23 @@ public partial class Block
     public string Name;
     public BlockBuilder Builder;
     public Material Material;
+    /// <summary>
+    /// Force set this.<see cref="Material"/> to be transparent. Check comment in
+    /// <see cref="IsMaterialTransparent"/> for more details.
+    /// </summary>
+    public OverrideMaterialTransparency OverrideMainMaterialTransparency;
     public Material[] Materials = new Material[0];
+    /// <summary>
+    /// Similar to this.<see cref="OverrideMainMaterialTransparency"/> but each of this
+    /// corresponding to an item in this.<see cref="Materials"/>.
+    /// </summary>
+    public OverrideMaterialTransparency[] OverrideSubMaterialsTransparency;
 
     public Color MinimapColor = Color.green;
     public bool IsDiggable = false;
     public bool IsWater = false;
     public bool Solid = true;
+    public bool WaterOccupancy = false;
     public bool BuildCollider = true;
     public bool Rendered = true;
     public UnityEngine.Rendering.ShadowCastingMode ShadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.On;
@@ -54,6 +75,11 @@ public partial class Block
     [NonSerialized] public bool           IsPlant        = false;
     [NonSerialized] public int            rotation       = 0;
     [NonSerialized] public LocString      LookAtTooltip;
+    // If each material is transparent. IsMaterialTransparent[0] is for this.Material.
+    // Elements from IsMaterialTransparent[1] to IsMaterialTransparent[IsMaterialTransparent.Count - 1] is for
+    // this.Materials. If the material is transparent, it will be skipped from generating shadow hull in
+    // ChunkBuilder.BuildWithBuildContext.
+    [NonSerialized] public List<bool>     IsMaterialTransparent;
 
     public bool IsLadder;
     public bool IsSlope;
