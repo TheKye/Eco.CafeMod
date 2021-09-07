@@ -1,12 +1,12 @@
 # Eco.CafeMod
-The Cafe Mod we build in our tutorial Video!
-
 Welcome to the Cafe Mod! 
 
-This will get updated as the turorial Progresses! 
+This is the Cafe Mod we build in our tutorial video!
 
-With a Branch for each part of the tutorial! with the Main Branch as the completed Product / The Entire Progress
+It will get improved on as the turorial progresses! 
 
-This mod is open source, anyone is free to use it, But Credit for all assets and asset creation will Remain with myself not including outsourced images, they belong to their respected owners
+There is a Branch for each part of the tutorial, with the Main Branch containing the completed Product / The Entire Progress.
 
-however you built this with me so big kudos to you all!
+This mod is open source, anyone is free to use it, but credit for all assets and asset creation will remain with myself (Kye) not including outsourced images, they belong to their respected owners, whom I will list credit to if desired.
+
+However, you built this with me so big kudos to you all!
