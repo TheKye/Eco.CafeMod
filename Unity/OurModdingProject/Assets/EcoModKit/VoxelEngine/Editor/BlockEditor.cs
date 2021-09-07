@@ -18,16 +18,24 @@ public static class BlockEditor
             block.Tier = EditorGUILayout.IntField("Tier", block.Tier);
             block.Category = EditorGUILayout.TextField("Category", block.Category);
 
-            block.Builder = EditorGUILayout.ObjectField("Builder", block.Builder, typeof(ScriptableObject), false) as BlockBuilder;
-            block.Material = EditorGUILayout.ObjectField("Material", block.Material, typeof(Material), false) as Material;
+            block.Builder               = EditorGUILayout.ObjectField("Builder", block.Builder, typeof(ScriptableObject), false) as BlockBuilder;
+            block.Material              = EditorGUILayout.ObjectField("Material", block.Material, typeof(Material), false) as Material;
+            OverrideMaterialTransparencyInspector(ref block.OverrideMainMaterialTransparency);
 
             if (block.Materials == null)
                 block.Materials = new Material[0];
+            if (block.OverrideSubMaterialsTransparency == null)
+                block.OverrideSubMaterialsTransparency = new OverrideMaterialTransparency[0];
             int numSubMaterials = EditorGUILayout.IntField("Sub Material Count", block.Materials.Length);
             if (numSubMaterials != block.Materials.Length)
                 Array.Resize(ref block.Materials, numSubMaterials);
+            if (numSubMaterials != block.OverrideSubMaterialsTransparency.Length)
+                Array.Resize(ref block.OverrideSubMaterialsTransparency, numSubMaterials);
             for (int subMaterial = 0; subMaterial < block.Materials.Length; subMaterial++)
+            {
                 block.Materials[subMaterial] = EditorGUILayout.ObjectField("Sub Material " + subMaterial, block.Materials[subMaterial], typeof(Material), false) as Material;
+                OverrideMaterialTransparencyInspector(ref block.OverrideSubMaterialsTransparency[subMaterial]);
+            }
 
             block.MinimapColor = EditorGUILayout.ColorField("Minimap Color", block.MinimapColor);
 
@@ -36,6 +44,7 @@ public static class BlockEditor
             block.BuildCollider      = EditorGUILayout.Toggle("Build Collider?", block.BuildCollider);
             block.Rendered           = EditorGUILayout.Toggle("Rendered", block.Rendered);
             block.ShadowCastingMode  = (UnityEngine.Rendering.ShadowCastingMode)EditorGUILayout.EnumPopup("Shadow Casting Mode", block.ShadowCastingMode);
+            block.WaterOccupancy     = EditorGUILayout.Toggle(new GUIContent("Allow Water Occupancy", "Prevents air pockets from forming underwater. Ie. Allows water to flow while underwater."), block.WaterOccupancy);
             block.IsWater            = EditorGUILayout.Toggle("Water?", block.IsWater);
             block.IsEmpty            = EditorGUILayout.Toggle("Empty?", block.IsEmpty);
             block.IsLadder           = EditorGUILayout.Toggle("Ladder?", block.IsLadder);
@@ -60,6 +69,19 @@ public static class BlockEditor
             GUILayout.EndVertical();
         }
 	}
+
+    private static void OverrideMaterialTransparencyInspector(ref OverrideMaterialTransparency overrideMaterialTransparency)
+    {
+        EditorGUI.indentLevel++;
+        EditorGUILayout.BeginHorizontal();
+        overrideMaterialTransparency = EditorGUILayout.Toggle(new GUIContent("Override"), overrideMaterialTransparency != OverrideMaterialTransparency.NotOverride)
+            ? EditorGUILayout.Toggle(new GUIContent("Transparent"), overrideMaterialTransparency == OverrideMaterialTransparency.ForceTransparent)
+                ? OverrideMaterialTransparency.ForceTransparent
+                : OverrideMaterialTransparency.ForceOpaque
+            : OverrideMaterialTransparency.NotOverride;
+        EditorGUILayout.EndHorizontal();
+        EditorGUI.indentLevel--;
+    }
 
     private static string DrawString(string val) { return EditorGUILayout.TextField(val); }
 
