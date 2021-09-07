@@ -4,7 +4,6 @@ Shader "Curved/Standard"
     Properties
     {
         _Color("Color", Color) = (1,1,1,1)
-        _SEGIColor("SEGI Tint", Color) = (1,1,1,1)
         _MainTex("Albedo", 2D) = "white" {}
 
         _Cutoff("Alpha Cutoff", Range(0.0, 1.0)) = 0.5
@@ -20,7 +19,7 @@ Shader "Curved/Standard"
         [ToggleOff] _GlossyReflections("Glossy Reflections", Float) = 1.0
 
         _BumpScale("Scale", Float) = 1.0
-        _BumpMap("Normal Map", 2D) = "bump" {}
+        [Normal] _BumpMap("Normal Map", 2D) = "bump" {}
 
         _Parallax ("Height Scale", Range (0.005, 0.08)) = 0.02
         _ParallaxMap ("Height Map", 2D) = "black" {}
@@ -35,7 +34,7 @@ Shader "Curved/Standard"
 
         _DetailAlbedoMap("Detail Albedo x2", 2D) = "grey" {}
         _DetailNormalMapScale("Scale", Float) = 1.0
-        _DetailNormalMap("Normal Map", 2D) = "bump" {}
+        [Normal] _DetailNormalMap("Normal Map", 2D) = "bump" {}
 
         [Enum(UV0,0,UV1,1)] _UVSec ("UV Set for secondary textures", Float) = 0
 
@@ -74,21 +73,23 @@ Shader "Curved/Standard"
 
             // -------------------------------------
 
-            #pragma shader_feature _NORMALMAP
-            #pragma shader_feature _ALPHABLEND_ON _ALPHAPREMULTIPLY_ON // only need forward variations for transparent
+            #pragma shader_feature_local _NORMALMAP
+            #pragma shader_feature_local _ALPHABLEND_ON _ALPHAPREMULTIPLY_ON // only need forward variations for transparent
             #pragma shader_feature _EMISSION
-            #pragma shader_feature _METALLICGLOSSMAP
-            //#pragma shader_feature ___ _DETAIL_MULX2
-            #pragma shader_feature _ _SMOOTHNESS_TEXTURE_ALBEDO_CHANNEL_A
-            #define _SPECULARHIGHLIGHTS_OFF // strip
-            #define _GLOSSYREFLECTIONS_OFF // strip
-            //#pragma shader_feature _PARALLAXMAP
-            #pragma shader_feature NO_CURVE
+            #pragma shader_feature_local _METALLICGLOSSMAP
+            //#pragma shader_feature_local ___ _DETAIL_MULX2
+            #pragma shader_feature_local _ _SMOOTHNESS_TEXTURE_ALBEDO_CHANNEL_A
+            #pragma shader_feature_local _SPECULARHIGHLIGHTS_OFF
+            #pragma shader_feature_local _GLOSSYREFLECTIONS_OFF
+            //#pragma shader_feature_local _PARALLAXMAP
 
             #pragma multi_compile_fwdbase
             #pragma multi_compile_fog
             #pragma multi_compile_instancing
             #pragma multi_compile __ FIRSTPERSONVIEW LOD_FADE_CROSSFADE
+
+            // Eco keywords
+            #pragma shader_feature NO_CURVE
 
             #pragma vertex vert
             #pragma fragment fragBase
@@ -125,18 +126,20 @@ Shader "Curved/Standard"
             // -------------------------------------
 
 
-            #pragma shader_feature _NORMALMAP
-            #pragma shader_feature _ALPHABLEND_ON _ALPHAPREMULTIPLY_ON // only need forward variations for transparent
-            #pragma shader_feature _METALLICGLOSSMAP
-            #pragma shader_feature _ _SMOOTHNESS_TEXTURE_ALBEDO_CHANNEL_A
-            #define _SPECULARHIGHLIGHTS_OFF // strip
-            //#pragma shader_feature ___ _DETAIL_MULX2
-            //#pragma shader_feature _PARALLAXMAP
-            #pragma shader_feature NO_CURVE
+            #pragma shader_feature_local _NORMALMAP
+            #pragma shader_feature_local _ALPHABLEND_ON _ALPHAPREMULTIPLY_ON // only need forward variations for transparent
+            #pragma shader_feature_local _METALLICGLOSSMAP
+            #pragma shader_feature_local _ _SMOOTHNESS_TEXTURE_ALBEDO_CHANNEL_A
+            #pragma shader_feature_local _SPECULARHIGHLIGHTS_OFF
+            //#pragma shader_feature_local ___ _DETAIL_MULX2
+            //#pragma shader_feature_local _PARALLAXMAP
 
             #pragma multi_compile_fwdadd
             #pragma multi_compile_fog
             #pragma multi_compile __ FIRSTPERSONVIEW LOD_FADE_CROSSFADE
+
+            // Eco keywords
+            #pragma shader_feature NO_CURVE
 
             #pragma vertex vert
             #pragma fragment fragAdd
@@ -170,13 +173,16 @@ Shader "Curved/Standard"
             // -------------------------------------
 
 
-            #pragma shader_feature _ _ALPHATEST_ON _ALPHABLEND_ON _ALPHAPREMULTIPLY_ON
-            #pragma shader_feature _METALLICGLOSSMAP
-            #pragma shader_feature _PARALLAXMAP
-            #pragma shader_feature NO_CURVE
+            #pragma shader_feature_local _ _ALPHATEST_ON _ALPHABLEND_ON _ALPHAPREMULTIPLY_ON
+            #pragma shader_feature_local _METALLICGLOSSMAP
+            #pragma shader_feature_local _PARALLAXMAP
+            
             #pragma multi_compile_shadowcaster
             #pragma multi_compile_instancing
             #pragma multi_compile _ LOD_FADE_CROSSFADE
+
+            // Eco keywords
+            #pragma shader_feature NO_CURVE
 
             #pragma vertex vert
             #pragma fragment fragShadowCaster
@@ -222,19 +228,21 @@ Shader "Curved/Standard"
 
             // -------------------------------------
 
-            #pragma shader_feature _NORMALMAP
-            #pragma shader_feature _ _ALPHATEST_ON _ALPHABLEND_ON _ALPHAPREMULTIPLY_ON
+            #pragma shader_feature_local _NORMALMAP
+            #pragma shader_feature_local _ _ALPHATEST_ON _ALPHABLEND_ON _ALPHAPREMULTIPLY_ON
             #pragma shader_feature _EMISSION
-            #pragma shader_feature _METALLICGLOSSMAP
-            #pragma shader_feature _ _SMOOTHNESS_TEXTURE_ALBEDO_CHANNEL_A
-            #pragma shader_feature _ _SPECULARHIGHLIGHTS_OFF
-            #pragma shader_feature ___ _DETAIL_MULX2
-            #pragma shader_feature _PARALLAXMAP
-            #pragma shader_feature NO_CURVE
+            #pragma shader_feature_local _METALLICGLOSSMAP
+            #pragma shader_feature_local _ _SMOOTHNESS_TEXTURE_ALBEDO_CHANNEL_A
+            #pragma shader_feature_local _ _SPECULARHIGHLIGHTS_OFF
+            #pragma shader_feature_local ___ _DETAIL_MULX2
+            #pragma shader_feature_local _PARALLAXMAP
 
             #pragma multi_compile_prepassfinal
             #pragma multi_compile_instancing
             #pragma multi_compile __ FIRSTPERSONVIEW LOD_FADE_CROSSFADE
+
+            // Eco keywords
+            #pragma shader_feature NO_CURVE
 
             #pragma vertex vert
             #pragma fragment fragDeferred
@@ -263,13 +271,15 @@ Shader "Curved/Standard"
 
             CGPROGRAM
             #pragma shader_feature _EMISSION
-            #pragma shader_feature _METALLICGLOSSMAP
-            #pragma shader_feature _ _SMOOTHNESS_TEXTURE_ALBEDO_CHANNEL_A
-            #pragma shader_feature ___ _DETAIL_MULX2
+            #pragma shader_feature_local _METALLICGLOSSMAP
+            #pragma shader_feature_local _ _SMOOTHNESS_TEXTURE_ALBEDO_CHANNEL_A
+            #pragma shader_feature_local ___ _DETAIL_MULX2
             #pragma shader_feature EDITOR_VISUALIZATION
-            #pragma shader_feature NO_CURVE
 
             #pragma multi_compile __ FIRSTPERSONVIEW
+
+            // Eco keywords
+            #pragma shader_feature NO_CURVE
 
             #pragma vertex vert
             #pragma fragment frag_meta
@@ -305,22 +315,24 @@ Shader "Curved/Standard"
             CGPROGRAM
             #pragma target 2.0
 
-            #pragma shader_feature _NORMALMAP
-            #pragma shader_feature _ALPHABLEND_ON _ALPHAPREMULTIPLY_ON // only need forward variations for transparent
+            #pragma shader_feature_local _NORMALMAP
+            #pragma shader_feature_local _ALPHABLEND_ON _ALPHAPREMULTIPLY_ON // only need forward variations for transparent
             #pragma shader_feature _EMISSION
-            #pragma shader_feature _METALLICGLOSSMAP
-            #pragma shader_feature _ _SMOOTHNESS_TEXTURE_ALBEDO_CHANNEL_A
-            #define _SPECULARHIGHLIGHTS_OFF // strip
-            #define _GLOSSYREFLECTIONS_OFF // strip
-            #pragma shader_feature NO_CURVE
-            // SM2.0: NOT SUPPORTED shader_feature ___ _DETAIL_MULX2
-            // SM2.0: NOT SUPPORTED shader_feature _PARALLAXMAP
+            #pragma shader_feature_local _METALLICGLOSSMAP
+            #pragma shader_feature_local _ _SMOOTHNESS_TEXTURE_ALBEDO_CHANNEL_A
+            #pragma shader_feature_local _SPECULARHIGHLIGHTS_OFF
+            #pragma shader_feature_local _GLOSSYREFLECTIONS_OFF
+            // SM2.0: NOT SUPPORTED shader_feature_local ___ _DETAIL_MULX2
+            // SM2.0: NOT SUPPORTED shader_feature_local _PARALLAXMAP
 
             #pragma skip_variants SHADOWS_SOFT DIRLIGHTMAP_COMBINED
 
             #pragma multi_compile_fwdbase
             #pragma multi_compile_fog
             #pragma multi_compile __ FIRSTPERSONVIEW
+
+            // Eco keywords
+            #pragma shader_feature NO_CURVE
 
             #pragma vertex vert
             #pragma fragment fragBase
@@ -350,19 +362,21 @@ Shader "Curved/Standard"
             CGPROGRAM
             #pragma target 2.0
 
-            #pragma shader_feature _NORMALMAP
-            #pragma shader_feature _ALPHABLEND_ON _ALPHAPREMULTIPLY_ON // only need forward variations for transparent
-            #pragma shader_feature _METALLICGLOSSMAP
-            #pragma shader_feature _ _SMOOTHNESS_TEXTURE_ALBEDO_CHANNEL_A
-            #define _SPECULARHIGHLIGHTS_OFF // strip
-            //#pragma shader_feature ___ _DETAIL_MULX2
-            // SM2.0: NOT SUPPORTED shader_feature _PARALLAXMAP
+            #pragma shader_feature_local _NORMALMAP
+            #pragma shader_feature_local _ALPHABLEND_ON _ALPHAPREMULTIPLY_ON // only need forward variations for transparent
+            #pragma shader_feature_local _METALLICGLOSSMAP
+            #pragma shader_feature_local _ _SMOOTHNESS_TEXTURE_ALBEDO_CHANNEL_A
+            #pragma shader_feature_local _SPECULARHIGHLIGHTS_OFF
+            //#pragma shader_feature_local ___ _DETAIL_MULX2
+            // SM2.0: NOT SUPPORTED shader_feature_local _PARALLAXMAP
             #pragma skip_variants SHADOWS_SOFT
-            #pragma shader_feature NO_CURVE
 
             #pragma multi_compile_fwdadd
             #pragma multi_compile_fog
             #pragma multi_compile __ FIRSTPERSONVIEW
+
+            // Eco keywords
+            #pragma shader_feature NO_CURVE
 
             #pragma vertex vert
             #pragma fragment fragAdd
@@ -389,12 +403,16 @@ Shader "Curved/Standard"
             CGPROGRAM
             #pragma target 2.0
 
-            #pragma shader_feature _ _ALPHATEST_ON _ALPHABLEND_ON _ALPHAPREMULTIPLY_ON
-            #pragma shader_feature _METALLICGLOSSMAP
-            #pragma shader_feature NO_CURVE
+            #pragma shader_feature_local _ _ALPHATEST_ON _ALPHABLEND_ON _ALPHAPREMULTIPLY_ON
+            #pragma shader_feature_local _METALLICGLOSSMAP
+            
             #pragma skip_variants SHADOWS_SOFT
+            
             #pragma multi_compile_shadowcaster
             #pragma multi_compile __ FIRSTPERSONVIEW
+
+            // Eco keywords
+            #pragma shader_feature NO_CURVE
 
             #pragma vertex vert
             #pragma fragment fragShadowCaster
@@ -442,10 +460,12 @@ Shader "Curved/Standard"
             #pragma fragment frag_meta
 
             #pragma shader_feature _EMISSION
-            #pragma shader_feature _METALLICGLOSSMAP
-            #pragma shader_feature _ _SMOOTHNESS_TEXTURE_ALBEDO_CHANNEL_A
-            #pragma shader_feature ___ _DETAIL_MULX2
+            #pragma shader_feature_local _METALLICGLOSSMAP
+            #pragma shader_feature_local _ _SMOOTHNESS_TEXTURE_ALBEDO_CHANNEL_A
+            #pragma shader_feature_local ___ _DETAIL_MULX2
             #pragma shader_feature EDITOR_VISUALIZATION
+
+            // Eco keywords
             #pragma shader_feature NO_CURVE
 
             #include "UnityStandardMeta.cginc"
