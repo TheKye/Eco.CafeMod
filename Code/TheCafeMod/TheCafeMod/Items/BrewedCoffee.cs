@@ -29,7 +29,7 @@ namespace Eco.Cafe
     {
         public override LocString DisplayDescription => Localizer.DoStr("A Lovely Cup Of Brewed Coffee, Yum.");
 
-        private static Nutrients nutrition = new Nutrients() 
+        private static Nutrients nutrition = new() 
         { 
             Carbs = 5, 
             Fat = 3, 
